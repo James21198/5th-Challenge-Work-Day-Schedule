@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-color: #ccf1fa;
 }
 
 textarea {
@@ -56,4 +57,17 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+h3 {text-align: center;
+  font-size: 32px;
+}
+
+footer {
+  padding: 5px;
+  clear: both;
+  font-family: 'Trebuchet MS';
+  text-align: center;
+  background-color: #ccf1fa;
+  color: black;
 }

@@ -1,24 +1,19 @@
 
 $(document).ready(function() {
 
-  
-
-  // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-  // the code isn't run until the browser has finished rendering all the elements
-  // in the html.
   var timeDisplayEl = $('#time-display');
-  
+
   function displayTime() {
-    var rightNow = dayjs().format('MMM DD, YYYY, hh:mm:ss a');
+    var rightNow = dayjs().format('DD MMM YYYY, hh:mm:ss a');
     timeDisplayEl.text(rightNow);
   }
 
 
   $('.saveBtn').on('click', function(){
     var value = $(this).siblings('.description').val();
-    var time = $(this).parent().attr('id');
+    var hour = $(this).parent().attr('id');
 
-    localStorage.setItem(time, value);
+    localStorage.setItem(hour, value);
 
     $('.notification').addClass('show');
 
@@ -26,11 +21,15 @@ $(document).ready(function() {
       $('.notification').removeClass('show');
     }, 5000);
   });
+
+  function setData() {
+    localStorage.getItem(hour,value);
+  }
   
   function scheduleTime() {
     var currentHour = dayjs().hour();
 
-    $('time-block').each(function() {
+    $('.time-block').each(function() {
       var blockHour = parseInt($(this).attr('id').split('-')[1]);
 
       if (blockHour < currentHour) {
