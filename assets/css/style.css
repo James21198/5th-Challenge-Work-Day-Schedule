@@ -46,6 +46,17 @@ textarea {
   color: white;
 }
 
+.notification {
+  text-align: center;
+  transition: ease-in;
+  animation: 5s forwards;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

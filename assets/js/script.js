@@ -4,7 +4,7 @@ $(document).ready(function() {
   var timeDisplayEl = $('#time-display');
 
   function displayTime() {
-    var rightNow = dayjs().format('DD MMM YYYY, hh:mm:ss a');
+    var rightNow = dayjs().format('dddd, DD MMM YYYY, hh:mm:ss a');
     timeDisplayEl.text(rightNow);
   }
 
